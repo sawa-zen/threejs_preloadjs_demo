@@ -31,7 +31,8 @@ function onWindowLoad() {
  * ロード進捗時のハンドラーです。
  */
 function onProgress (e) {
-  loader.innerHTML = 'Loading... ' +  (e.loaded * 100) +  '%';
+  var progress = Math.floor(e.loaded * 100);
+  loader.innerHTML = 'Loading... ' + progress + '%';
 }
 
 /**
